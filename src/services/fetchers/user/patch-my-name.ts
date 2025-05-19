@@ -1,6 +1,6 @@
 import API_ROUTES from "@/services/constants/api-routes";
 import { apiRequest } from "@/services/instance";
-import { UserDTO } from "@/services/types/user";
+import type { UserDTO } from "@/services/types/user";
 
 type PatchMyNameRequest = { name: string };
 
