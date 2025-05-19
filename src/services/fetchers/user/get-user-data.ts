@@ -2,13 +2,17 @@ import { UserDTO } from "@/services/types/user";
 import API_ROUTES from "@/services/constants/api-routes";
 import { apiRequest } from "@/services/instance";
 
-export type GetUserParams = {
+type GetUserParams = {
   userId: string;
 };
 
-export type GetUserDataResponse = UserDTO;
+type GetUserDataPayload = {
+  params: GetUserParams;
+};
 
-const getUser = async ({ userId }: GetUserParams) => {
+type GetUserDataResponse = UserDTO;
+
+const getUser = async ({ params: { userId } }: GetUserDataPayload) => {
   const response = await apiRequest.get<GetUserDataResponse>(
     `${API_ROUTES.USER}/${userId}`
   );
@@ -17,3 +21,5 @@ const getUser = async ({ userId }: GetUserParams) => {
 };
 
 export default getUser;
+
+export type { GetUserDataPayload, GetUserParams, GetUserDataResponse };

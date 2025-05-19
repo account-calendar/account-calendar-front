@@ -6,9 +6,14 @@ type PatchMyNameRequest = { name: string };
 
 type PatchMyNameResponse = UserDTO;
 
-type PatchMyNameParams = { id: string; request: PatchMyNameRequest };
+type PatchMyNameParams = { id: string };
 
-const patchMyName = async ({ id, request }: PatchMyNameParams) => {
+type PatchMyNamePayload = {
+  params: PatchMyNameParams;
+  request: PatchMyNameRequest;
+};
+
+const patchMyName = async ({ params: { id }, request }: PatchMyNamePayload) => {
   const response = await apiRequest.patch<
     PatchMyNameResponse,
     PatchMyNameRequest
@@ -19,4 +24,9 @@ const patchMyName = async ({ id, request }: PatchMyNameParams) => {
 
 export default patchMyName;
 
-export type { PatchMyNameParams, PatchMyNameResponse, PatchMyNameRequest };
+export type {
+  PatchMyNamePayload,
+  PatchMyNameResponse,
+  PatchMyNameParams,
+  PatchMyNameRequest,
+};

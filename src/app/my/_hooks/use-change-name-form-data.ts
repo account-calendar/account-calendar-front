@@ -1,15 +1,13 @@
 "use client";
 
-import changeNameFormDataResolver, {
-  ChangeNameFormData,
-} from "@/app/my/_validations/change-name-form-data";
+import changeNameFormDataResolver from "@/app/my/_validations/change-name-form-data";
 import usePatchMyName from "@/services/hooks/user/use-patch-my-name";
 import { useForm } from "react-hook-form";
 
 const useChangeNameFormData = () => {
   const { mutate } = usePatchMyName();
 
-  const formMethods = useForm<ChangeNameFormData>({
+  const formMethods = useForm({
     mode: "all",
     defaultValues: {
       name: "",

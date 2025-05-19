@@ -1,20 +1,23 @@
 import { QueryKey } from "@/services/constants/query-keys";
-import patchMyName from "@/services/fetchers/user/patch-my-name";
-import { PatchMyNameParams } from "@/services/fetchers/user/patch-my-name";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import patchMyName, {
+  PatchMyNameResponse,
+} from "@/services/fetchers/user/patch-my-name";
+import type { PatchMyNamePayload } from "@/services/fetchers/user/patch-my-name";
+import { AxiosError } from "axios";
 
 const usePatchMyName = () => {
   const queryClient = useQueryClient();
 
-  return useMutation({
-    mutationFn: (params: PatchMyNameParams) => patchMyName(params),
+  return useMutation<PatchMyNameResponse, AxiosError, PatchMyNamePayload>({
+    mutationFn: (payload) => patchMyName(payload),
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: [QueryKey.User],
         refetchType: "all",
       });
     },
-    onError: () => {},
+    onError: (error) => {},
   });
 };
 

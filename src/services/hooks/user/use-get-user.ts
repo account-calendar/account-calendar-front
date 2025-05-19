@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { QueryKey } from "@/services/constants/query-keys";
-import getUser, { GetUserParams } from "@/services/fetchers/user/get-user-data";
+import getUser from "@/services/fetchers/user/get-user-data";
+import type { GetUserDataPayload } from "@/services/fetchers/user/get-user-data";
 
-export const useGetUser = (params: GetUserParams) =>
+export const useGetUser = (params: GetUserDataPayload) =>
   useQuery({
-    queryKey: [QueryKey.User, params],
+    queryKey: [QueryKey.User, "list", params],
     queryFn: () => getUser(params),
   });
 

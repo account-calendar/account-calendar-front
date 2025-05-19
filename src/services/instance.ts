@@ -19,13 +19,13 @@ baseInstance.interceptors.request.use((config) => {
   return config;
 });
 
-interface ApiRequestMethods {
+type ApiRequestMethods = {
   get<T>(url: string, request?: AxiosRequestConfig): Promise<T>;
   post<T, K>(url: string, data?: K, config?: AxiosRequestConfig): Promise<T>;
   put<T, K>(url: string, data?: K, config?: AxiosRequestConfig): Promise<T>;
   patch<T, K>(url: string, data?: K, config?: AxiosRequestConfig): Promise<T>;
   delete<T>(url: string, request?: AxiosRequestConfig): Promise<T>;
-}
+};
 
 export const apiRequest: ApiRequestMethods = {
   get: (url, request) => {
