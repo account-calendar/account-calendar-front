@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+
+import type { Metadata } from "next";
+import RootProvider from "./_components/root-provider";
 
 export const metadata: Metadata = {
   title: "가계부",
@@ -13,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning className="h-[100dvh]">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <RootProvider>{children}</RootProvider>
+      </body>
     </html>
   );
 }
