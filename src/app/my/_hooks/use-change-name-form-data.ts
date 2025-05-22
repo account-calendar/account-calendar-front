@@ -20,7 +20,9 @@ const useChangeNameFormData = () => {
   const handleSubmitFormData = handleSubmit((data) => {
     mutate(
       {
-        id: data.name,
+        params: {
+          id: data.name,
+        },
         request: data,
       },
       {
