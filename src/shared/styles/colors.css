@@ -1,0 +1,52 @@
+@theme {
+  --color-*: initial;
+
+  /* BASE */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-black-50: #00000050;
+  --color-white-50: #ffffff50;
+  --color-white-0: #ffffff00;
+
+  /* GRAY */
+  --color-gray-50: #ededf1;
+  --color-gray-100: #b6b7c3;
+  --color-gray-200: #707287;
+  --color-gray-300: #5a5b6f;
+  --color-gray-400: #373745;
+  --color-gray-500: #262630;
+  --color-gray-600: #0a0a11;
+
+  /* PURPLE */
+  --color-purple-50: #c1c8ff;
+  --color-purple-100: #9ba4ff;
+  --color-purple-200: #7474ff;
+  --color-purple-300: #5234f7;
+  --color-purple-400: #4628da;
+  --color-purple-500: #32258a;
+
+  /* YELLOW */
+  --color-yellow-50: #fffce7;
+  --color-yellow-100: #fff7c6;
+  --color-yellow-200: #fff198;
+
+  /* CYAN */
+  --color-cyan-50: #f1fcfe;
+  --color-cyan-100: #def7fd;
+  --color-cyan-200: #c5f1fc;
+
+  /* BLUE */
+  --color-blue-50: #e6f1fe;
+  --color-blue-100: #b0d4fb;
+  --color-blue-200: #8abff9;
+
+  /* GREEN */
+  --color-green-50: #ecf9f0;
+  --color-green-100: #d2f2dc;
+  --color-green-200: #aee7c0;
+
+  /* RED */
+  --color-red-50: #ffeeee;
+  --color-red-100: #fecacb;
+  --color-red-200: #fe8d8f;
+}
