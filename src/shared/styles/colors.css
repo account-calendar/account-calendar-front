@@ -44,4 +44,71 @@
   --color-red-50: #ffe9e9;
   --color-red-100: #ffcacb;
   --color-red-200: #fb644a;
+
+  /* BACKGROUND */
+  --color-bg-primary: var(--color-purple-300);
+  --color-bg-primary-hover: var(--color-purple-200);
+  --color-bg-primary-pressed: var(--color-purple-100);
+
+  --color-bg-secondary: var(--color-gray-600);
+  --color-bg-secondary-hover: var(--color-gray-500);
+  --color-bg-secondary-pressed: var(--color-gray-300);
+
+  --color-bg-tertiary: var(--color-gray-400);
+  --color-bg-tertiary-hover: var(--color-gray-300);
+  --color-bg-tertiary-pressed: var(--color-gray-200);
+
+  --color-bg-disabled: var(--color-gray-500);
+
+  --color-bg-base-default: var(--color-white);
+  --color-bg-base-strong: var(--color-gray-300);
+  --color-bg-base-normal: var(--color-gray-400);
+  --color-bg-base-weak: var(--color-gray-500);
+
+  --color-bg-expense: var(--color-red-100);
+  --color-bg-income: var(--color-blue-100);
+
+  /* TEXT */
+  --color-text-primary: var(--color-purple-200);
+  --color-text-primary-hover: var(--color-purple-100);
+  --color-text-primary-pressed: var(--color-purple-50);
+
+  --color-text-on-primary: var(--color-white);
+  --color-text-on-secondary: var(--color-purple-200);
+
+  --color-text-disabled: var(--color-gray-300);
+
+  --color-text-strong: var(--color-white);
+  --color-text-normal: var(--color-gray-100);
+  --color-text-weak: var(--color-gray-200);
+
+  --color-text-dark: var(--color-gray-600);
+
+  --color-text-error: var(--color-red-200);
+  --color-text-success: var(--color-green-200);
+  --color-text-informative: var(--color-blue-200);
+  --color-text-warning: var(--color-yellow-100);
+
+  --color-text-expense: var(--color-red-200);
+  --color-text-income: var(--color-blue-200);
+
+  /* BORDER */
+  --color-border-primary: var(--color-purple-300);
+  --color-border-primary-hover: var(--color-purple-200);
+  --color-border-primary-pressed: var(--color-purple-100);
+
+  --color-border-secondary: var(--color-purple-200);
+  --color-border-disabled: var(--color-gray-500);
+
+  --color-border-base-strong: var(--color-gray-300);
+  --color-border-base-normal: var(--color-gray-400);
+  --color-border-base-weak: var(--color-gray-500);
+
+  --color-border-error: var(--color-red-200);
+  --color-border-success: var(--color-green-200);
+  --color-border-informative: var(--color-blue-200);
+  --color-border-warning: var(--color-yellow-100);
+
+  /* MATERIAL */
+  --color-dimmest: var(--color-black-50);
 }
