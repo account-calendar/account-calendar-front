@@ -158,8 +158,8 @@
     letter-spacing: var(--tracking-02);
   }
 
-  .text-lb-md-normal {
-    font-size: var(--text-02);
+  .text-lb-sm-normal {
+    font-size: var(--text-01);
     font-weight: var(--font-weight-medium);
     line-height: var(--spacing-01);
     letter-spacing: var(--tracking-02);

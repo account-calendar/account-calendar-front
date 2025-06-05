@@ -31,7 +31,7 @@
   --color-yellow-200: #ffe233;
 
   /* BLUE */
-  --color-blue-50: #daebfe;
+  --color-blue-50: #b1e5ff;
   --color-blue-100: #9ccbff;
   --color-blue-200: #1b7fee;
 
@@ -82,7 +82,7 @@
   --color-text-normal: var(--color-gray-100);
   --color-text-weak: var(--color-gray-200);
 
-  --color-text-dark: var(--color-gray-600);
+  --color-text-inverse: var(--color-gray-600);
 
   --color-text-error: var(--color-red-200);
   --color-text-success: var(--color-green-200);
