@@ -6,43 +6,43 @@ export default function Home() {
       <br />
 
       <div className="flex items-center gap-x-sm">
-        <span className="text-h-lg-strong">가계부</span>
-        <span className="text-h-md-strong">가계부</span>
-        <span className="text-h-sm-strong">가계부</span>
-        <span className="text-h-xs-strong">가계부</span>
+        <span className="typo-h-lg-strong ">가계부</span>
+        <span className="typo-h-md-strong">가계부</span>
+        <span className="typo-h-sm-strong">가계부</span>
+        <span className="typo-h-xs-strong">가계부</span>
       </div>
       <br />
 
       <div className="flex items-center gap-x-sm">
-        <span className="text-sub-lg-strong">가계부</span>
-        <span className="text-sub-lg-normal">가계부</span>
-        <span className="text-sub-md-strong">가계부</span>
-        <span className="text-sub-md-normal">가계부</span>
+        <span className="typo-sub-lg-strong">가계부</span>
+        <span className="typo-sub-lg-normal">가계부</span>
+        <span className="typo-sub-md-strong">가계부</span>
+        <span className="typo-sub-md-normal">가계부</span>
       </div>
       <br />
       <div className="flex items-center gap-x-sm">
-        <span className="text-bd-md-normal">가계부</span>
-        <span className="text-bd-md-weak">가계부</span>
-        <span className="text-bd-sm-normal">가계부</span>
-        <span className="text-bd-sm-weak">가계부</span>
+        <span className="typo-bd-md-normal">가계부</span>
+        <span className="typo-bd-md-weak">가계부</span>
+        <span className="typo-bd-sm-normal">가계부</span>
+        <span className="typo-bd-sm-weak">가계부</span>
       </div>
       <br />
       <div className="flex items-center gap-x-sm">
-        <span className="text-cap-sm-weak">가계부</span>
+        <span className="typo-cap-sm-weak">가계부</span>
       </div>
       <br />
       <div className="flex items-center gap-x-sm">
-        <span className="text-lb-lg-strong">가계부</span>
-        <span className="text-lb-lg-normal">가계부</span>
-        <span className="text-lb-md-strong">가계부</span>
-        <span className="text-lb-md-normal">가계부</span>
+        <span className="typo-lb-lg-strong">가계부</span>
+        <span className="typo-lb-lg-normal">가계부</span>
+        <span className="typo-lb-md-strong">가계부</span>
+        <span className="typo-lb-md-normal">가계부</span>
       </div>
       <br />
       <div className="flex items-center gap-x-sm">
-        <span className="text-btn-xl-strong">가계부</span>
-        <span className="text-btn-lg-strong">가계부</span>
-        <span className="text-btn-md-normal">가계부</span>
-        <span className="text-btn-sm-normal">가계부</span>
+        <span className="typo-btn-xl-strong">가계부</span>
+        <span className="typo-btn-lg-strong">가계부</span>
+        <span className="typo-btn-md-normal">가계부</span>
+        <span className="typo-btn-sm-normal">가계부</span>
       </div>
       <br />
       <div className="flex items-center gap-x-sm">
