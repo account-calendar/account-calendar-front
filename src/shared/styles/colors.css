@@ -69,9 +69,12 @@
   --color-bg-income: var(--color-blue-100);
 
   --color-bg-informative: var(--color-blue-50);
-  --color-bg-danger: var(--color-red-50);
-  --color-bg-success: var(--color-green-50);
-  --color-bg-warning: var(--color-yellow-50);
+  --color-bg-danger: var(--color-red-100);
+  --color-bg-success: var(--color-green-100);
+  --color-bg-warning: var(--color-yellow-100);
+
+  --color-bg-danger-strong: var(--color-red-200);
+  --color-bg-warning-strong: var(--color-yellow-200);
 
   /* TEXT */
   --color-text-primary: var(--color-purple-200);
