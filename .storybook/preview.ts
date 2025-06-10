@@ -4,6 +4,9 @@ import "@/shared/styles/index.css";
 
 const preview: Preview = {
   parameters: {
+    initialGlobals: {
+      background: { value: "dark" },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
