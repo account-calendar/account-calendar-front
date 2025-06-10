@@ -68,6 +68,11 @@
   --color-bg-expense: var(--color-red-100);
   --color-bg-income: var(--color-blue-100);
 
+  --color-bg-informative: var(--color-blue-50);
+  --color-bg-danger: var(--color-red-50);
+  --color-bg-success: var(--color-green-50);
+  --color-bg-warning: var(--color-yellow-50);
+
   /* TEXT */
   --color-text-primary: var(--color-purple-200);
   --color-text-primary-hover: var(--color-purple-100);
@@ -84,7 +89,7 @@
 
   --color-text-inverse: var(--color-gray-600);
 
-  --color-text-error: var(--color-red-200);
+  --color-text-danger: var(--color-red-200);
   --color-text-success: var(--color-green-200);
   --color-text-informative: var(--color-blue-200);
   --color-text-warning: var(--color-yellow-100);
@@ -104,7 +109,7 @@
   --color-border-base-normal: var(--color-gray-400);
   --color-border-base-weak: var(--color-gray-500);
 
-  --color-border-error: var(--color-red-200);
+  --color-border-danger: var(--color-red-200);
   --color-border-success: var(--color-green-200);
   --color-border-informative: var(--color-blue-200);
   --color-border-warning: var(--color-yellow-100);

@@ -36,7 +36,7 @@ export const AllIcons: Story = {
             className="flex items-center gap-x-ds-6 border-b border-black-40"
           >
             <Icon icon={icon as IconList} className="w-2xl" />
-            <Icon icon={icon as IconList} className="w-2xl text-text-error" />
+            <Icon icon={icon as IconList} className="w-2xl text-text-danger" />
             <span className="typo-bd-2">{icon}</span>
           </div>
         ))}
