@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 
-type FieldProps = PropsWithChildren & {
+export type FieldProps = PropsWithChildren & {
   title: string;
   errorMessage?: string;
   required?: boolean;
@@ -10,7 +10,7 @@ const Field = ({ children, title, errorMessage, required }: FieldProps) => {
   return (
     <div className="flex flex-col gap-xs ">
       <div className="flex gap-x-xs typo-h-xs-strong">
-        <span>{title}</span>
+        <span className="text-text-strong">{title}</span>
         {required && <span className="text-red-200">*</span>}
       </div>
       {children}
