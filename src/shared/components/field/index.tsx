@@ -8,7 +8,7 @@ export type FieldProps = PropsWithChildren & {
 
 const Field = ({ children, title, errorMessage, required }: FieldProps) => {
   return (
-    <div className="flex flex-col gap-xs ">
+    <div className="flex flex-col gap-xs w-full">
       <div className="flex gap-x-xs typo-h-xs-strong">
         <span className="text-text-strong">{title}</span>
         {required && <span className="text-red-200">*</span>}

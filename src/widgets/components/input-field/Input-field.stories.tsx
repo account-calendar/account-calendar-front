@@ -1,8 +1,8 @@
-import InputField from "@/shared/components/input-field";
+import InputField from "@/widgets/components/input-field";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Shared/Input Field",
+  title: "Widgets/Input Field",
   component: InputField,
   parameters: {
     layout: "centered",
