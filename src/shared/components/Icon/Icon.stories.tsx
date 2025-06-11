@@ -28,19 +28,17 @@ export const Default: Story = {};
 
 export const AllIcons: Story = {
   render: () => (
-    <div className="flex gap-x-ds-8 bg-gray-100 p-l">
-      <div className="flex flex-col gap-y-ds-4">
-        {Object.keys(ICONS).map((icon) => (
-          <div
-            key={icon}
-            className="flex items-center gap-x-ds-6 border-b border-black-40"
-          >
-            <Icon icon={icon as IconList} className="w-2xl" />
-            <Icon icon={icon as IconList} className="w-2xl text-text-danger" />
-            <span className="typo-bd-2">{icon}</span>
-          </div>
-        ))}
-      </div>
+    <div className="flex flex-col bg-gray-600 p-lg rounded-2xl">
+      {Object.keys(ICONS).map((icon) => (
+        <div
+          key={icon}
+          className="flex items-center gap-x-lg not-last:border-b border-black-40 text-text-strong p-lg"
+        >
+          <Icon icon={icon as IconList} className="w-2xl" />
+          <Icon icon={icon as IconList} className="w-2xl text-text-danger" />
+          <span className="typo-bd-2">{icon}</span>
+        </div>
+      ))}
     </div>
   ),
 };
