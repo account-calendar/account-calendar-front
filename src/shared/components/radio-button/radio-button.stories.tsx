@@ -1,9 +1,9 @@
-import Segment from "@/shared/components/segment";
+import RadioButton from "@/shared/components/radio-button";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Shared/Segment",
-  component: Segment,
+  title: "Shared/Radio Button",
+  component: RadioButton,
   parameters: {
     layout: "centered",
   },
@@ -11,7 +11,7 @@ const meta = {
   args: {
     children: "Segment",
   },
-} satisfies Meta<typeof Segment>;
+} satisfies Meta<typeof RadioButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

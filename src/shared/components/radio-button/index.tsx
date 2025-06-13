@@ -1,12 +1,17 @@
 import { cn } from "@/shared/utils/style";
 import type { ButtonHTMLAttributes } from "react";
 
-type SegmentProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type RadioButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   selected?: boolean;
   children?: React.ReactNode;
 };
 
-const Segment = ({ children, className, selected, ...props }: SegmentProps) => {
+const RadioButton = ({
+  children,
+  className,
+  selected,
+  ...props
+}: RadioButtonProps) => {
   return (
     <button
       className={cn(
@@ -24,4 +29,4 @@ const Segment = ({ children, className, selected, ...props }: SegmentProps) => {
   );
 };
 
-export default Segment;
+export default RadioButton;
