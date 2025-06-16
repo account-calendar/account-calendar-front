@@ -20,7 +20,7 @@ export const Default: Story = {
   args: {},
   render: () => (
     <div className="h-[600px]">
-      <Calendar selectedMonth="2025-06" onDateClick={console.log} />
+      <Calendar selectedMonth="2025-04" onDateClick={console.log} />
     </div>
   ),
 };

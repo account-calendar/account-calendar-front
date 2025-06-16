@@ -12,8 +12,6 @@ const Calendar = ({ selectedMonth, onDateClick }: CalendarProps) => {
     return getMonthDays(selectedMonth);
   }, [selectedMonth]);
 
-  console.log({ days });
-
   return (
     <div className="grid grid-cols-7 grid-rows-[auto] auto-rows-fr text-center bg-gray-600 size-full typo-lb-sm-normal">
       {HEADER.map((item) => (

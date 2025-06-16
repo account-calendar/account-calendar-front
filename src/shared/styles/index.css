@@ -3,3 +3,7 @@
 @import "./typos.css";
 @import "./spacing.css";
 @import "./border.css";
+
+@import "swiper/css";
+@import "swiper/css/free-mode";
+@import "swiper/css/scrollbar";
