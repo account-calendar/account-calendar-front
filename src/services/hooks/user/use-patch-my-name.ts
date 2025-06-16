@@ -1,9 +1,10 @@
 import { QueryKey } from "@/services/constants/query-keys";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import patchMyName, {
+import patchMyName from "@/services/fetchers/user/patch-my-name";
+import type {
+  PatchMyNamePayload,
   PatchMyNameResponse,
 } from "@/services/fetchers/user/patch-my-name";
-import type { PatchMyNamePayload } from "@/services/fetchers/user/patch-my-name";
 import { AxiosError } from "axios";
 
 const usePatchMyName = () => {
