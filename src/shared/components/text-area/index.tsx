@@ -1,6 +1,6 @@
 import { cn } from "@/shared/utils/style";
 
-type TextAreaProps = React.ComponentPropsWithoutRef<"textarea"> & {
+export type TextAreaProps = React.ComponentPropsWithoutRef<"textarea"> & {
   className?: string;
 };
 
