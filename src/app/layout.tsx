@@ -23,12 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ko"
-      suppressHydrationWarning
-      className={cn(pretendard.className, "h-[100dvh]")}
-    >
-      <body className="antialiased">
+    <html lang="ko" suppressHydrationWarning>
+      <body
+        className={cn(
+          pretendard.className,
+          "h-[100dvh] antialiased bg-gray-600"
+        )}
+      >
         <RootProvider>{children}</RootProvider>
       </body>
     </html>
