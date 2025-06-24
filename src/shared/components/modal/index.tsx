@@ -1,5 +1,4 @@
 import Button from "@/shared/components/button";
-import Icon from "@/shared/components/Icon";
 import { cn } from "@/shared/utils/style";
 import { Dialog, DialogPanel } from "@headlessui/react";
 
@@ -8,10 +7,24 @@ type ModalProps = {
   onClose: () => void;
   children: React.ReactNode;
   title: string;
-  description: string;
+  description?: string;
+  confirmText?: string;
+  cancelText?: string;
+  onConfirm: () => void;
+  onCancel?: () => void;
 };
 
-const Modal = ({ open, onClose, children, title, description }: ModalProps) => {
+const Modal = ({
+  open,
+  onClose,
+  children,
+  title,
+  description,
+  confirmText,
+  cancelText,
+  onConfirm,
+  onCancel,
+}: ModalProps) => {
   return (
     <Dialog
       open={open}
@@ -29,19 +42,38 @@ const Modal = ({ open, onClose, children, title, description }: ModalProps) => {
         <div className="flex flex-col gap-sm">
           <div className="flex items-center justify-between text-text-strong">
             <span className="typo-h-lg-strong">{title}</span>
-            <Icon icon="CLOSE" className="size-2xl" />
+            <Button
+              variant="icon"
+              size="sm"
+              onClick={onClose}
+              iconOption={{ icon: "CLOSE" }}
+            />
           </div>
-          <span className="text-text-normal typo-bd-md-weak">
-            {description}
-          </span>
+          {description && (
+            <span className="text-text-normal typo-bd-md-weak">
+              {description}
+            </span>
+          )}
         </div>
         <div className="flex-1 overflow-y-auto">{children}</div>
         <div className="flex gap-sm gap-x-md">
-          <Button className="flex-1" variant="secondary" size="xl">
-            Cancel
-          </Button>
-          <Button className="flex-1" variant="primary" size="xl">
-            Confirm
+          {onCancel && (
+            <Button
+              className="flex-1"
+              variant="secondary"
+              size="xl"
+              onClick={onCancel}
+            >
+              {cancelText ?? "취소"}
+            </Button>
+          )}
+          <Button
+            className="flex-1"
+            variant="primary"
+            size="xl"
+            onClick={onConfirm}
+          >
+            {confirmText ?? "확인"}
           </Button>
         </div>
       </DialogPanel>

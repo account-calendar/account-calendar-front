@@ -1,14 +1,14 @@
-import TextAreaField from "@/widgets/components/text-area-field";
+import InputField from "@/entities/components/input-field";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Widgets/Text Area Field",
-  component: TextAreaField,
+  title: "Entities/Input Field",
+  component: InputField,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof TextAreaField>;
+} satisfies Meta<typeof InputField>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,8 +23,8 @@ export const Error: Story = {
   args: {
     title: "Error Title",
     errorMessage: "validation",
-    textAreaOptions: {
-      placeholder: "Placeholder",
+    inputOptions: {
+      status: "error",
     },
   },
 };

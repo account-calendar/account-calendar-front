@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/shared/utils/style";
 import type { ButtonHTMLAttributes } from "react";
 
@@ -20,10 +22,10 @@ const DayButton = ({
   return (
     <button
       className={cn(
-        "p-xs flex flex-col gap-y-xs group cursor-pointer transition-all rounded-lg",
+        "p-xs flex flex-col gap-y-xs group cursor-pointer transition-all rounded-lg overflow-hidden",
         "hover:bg-bg-secondary-hover",
         "active:bg-bg-secondary-pressed",
-        "disabled:cursor-not-allowed disabled:hover:bg-transparent"
+        "disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:active:bg-transparent"
       )}
       disabled={disabled}
       onClick={() => onDateClick(day)}
@@ -40,10 +42,10 @@ const DayButton = ({
         {day.getDate()}
       </span>
       {!!income && (
-        <span className="text-text-income">{`+${income.toLocaleString()}`}</span>
+        <span className="text-text-income text-[8px] leading-[10px]">{`+${income.toLocaleString()}`}</span>
       )}
       {!!expense && (
-        <span className="text-text-expense">{`-${expense.toLocaleString()}`}</span>
+        <span className="text-text-expense text-[8px] leading-[10px]">{`-${expense.toLocaleString()}`}</span>
       )}
     </button>
   );

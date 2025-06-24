@@ -1,8 +1,8 @@
-import SelectField from "@/widgets/components/select-field";
+import SelectField from "@/entities/components/select-field";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Widgets/Select Field",
+  title: "Entities/Select Field",
   component: SelectField,
   parameters: {
     layout: "centered",
