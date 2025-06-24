@@ -40,7 +40,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div
         className={cn(
-          "w-full h-[44px] rounded-lg bg-bg-base-normal flex items-center px-lg caret-purple-200",
+          "w-full h-[44px] rounded-lg bg-bg-base-normal flex items-center px-lg caret-purple-200 ring-inset ring-bg-base-normal transition-all",
           "focus-within:ring-inset focus-within:ring-1 focus-within:ring-border-primary-hover",
           { "bg-bg-disabled": disabled },
           {
@@ -52,7 +52,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       >
         <input
           className={cn(
-            "peer outline-none text-text-strong typo-sub-lg-normal",
+            "peer outline-none text-text-strong typo-sub-lg-normal flex-1",
             "placeholder:text-text-weak",
             { "text-text-disabled": disabled },
             className
