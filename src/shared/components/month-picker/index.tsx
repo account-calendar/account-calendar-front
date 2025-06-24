@@ -59,8 +59,9 @@ const MonthPicker = ({ selectedMonth, onMonthChange }: MonthPickerProps) => {
           </PopoverButton>
           {open && (
             <PopoverPanel
+              transition
               anchor="bottom"
-              className="mt-md p-md w-[156px] bg-bg-tertiary rounded-xl flex flex-col"
+              className="mt-md p-md w-[156px] bg-bg-tertiary rounded-xl flex flex-col transition duration-200 ease-in-out data-closed:-translate-y-1 data-closed:opacity-0"
             >
               <div className="relative max-h-[116px] flex gap-x-sm flex-1 pb-sm">
                 <VerticalSwiper
