@@ -4,13 +4,14 @@ import { cn } from "@/shared/utils/style";
 import clsx from "clsx";
 import type { ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "text" | "icon";
+type ButtonVariant = "primary" | "secondary" | "tertiary" | "text" | "icon";
 type ButtonSize = "xl" | "lg" | "md" | "sm" | "xs";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
   iconOption?: IconProps;
+  iconPosition?: "left" | "right";
   children?: React.ReactNode;
 };
 
@@ -20,6 +21,7 @@ const Button = ({
   variant = "primary",
   size = "md",
   iconOption,
+  iconPosition = "left",
   ...props
 }: ButtonProps) => {
   return (
@@ -33,13 +35,19 @@ const Button = ({
       )}
       {...props}
     >
-      {iconOption && (
+      {iconOption && iconPosition === "left" && (
         <Icon
           {...iconOption}
           className={cn(SIZE_STYLE[size].icon, iconOption.className)}
         />
       )}
       {children}
+      {iconOption && iconPosition === "right" && (
+        <Icon
+          {...iconOption}
+          className={cn(SIZE_STYLE[size].icon, iconOption.className)}
+        />
+      )}
     </button>
   );
 };
@@ -65,6 +73,11 @@ const VARIANT_STYLE: Record<ButtonVariant, string> = {
     "hover:bg-bg-secondary-hover",
     "active:bg-bg-secondary-pressed"
   ),
+  tertiary: clsx(
+    "bg-bg-tertiary text-white",
+    "hover:bg-bg-tertiary-hover",
+    "active:bg-bg-tertiary-pressed"
+  ),
   text: clsx(
     "text-text-primary",
     "hover:text-text-primary-hover",
@@ -89,6 +102,7 @@ const SIZE_STYLE: Record<
   },
   lg: {
     button: clsx("h-[48px] px-lg rounded-lg typo-btn-lg-strong"),
+    icon: clsx("size-2xl"),
   },
   md: {
     button: clsx("h-[40px] px-lg rounded-lg typo-btn-md-normal"),

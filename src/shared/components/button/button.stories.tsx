@@ -57,6 +57,24 @@ export const SecondaryXL: Story = {
   },
 };
 
+export const TertiaryLG: Story = {
+  args: {
+    variant: "tertiary",
+    size: "lg",
+  },
+};
+
+export const TertiaryLGIcon: Story = {
+  args: {
+    variant: "tertiary",
+    size: "lg",
+    iconOption: {
+      icon: "PLUS",
+    },
+    iconPosition: "right",
+  },
+};
+
 export const Text: Story = {
   args: {
     variant: "text",
