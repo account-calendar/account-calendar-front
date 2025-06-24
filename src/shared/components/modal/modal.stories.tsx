@@ -26,6 +26,7 @@ export const Default: Story = {
           onClose={onClose}
           title="Title"
           description="Description"
+          onConfirm={() => {}}
         >
           <div className="typo-h-lg-strong text-text-strong bg-bg-base-weak h-[200px] flex items-center justify-center rounded-3xl">
             Relace Contents
