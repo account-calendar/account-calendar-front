@@ -1,10 +1,10 @@
 import type { PropsWithChildren } from "react";
-import Navigation from "../../../widgets/components/navigation";
+import MainNavigation from "@/widgets/components/navigation/main";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <Navigation />
+      <MainNavigation />
       {children}
     </>
   );

@@ -21,13 +21,11 @@ const MainCalendar = ({ selectedMonth }: MainCalendarProps) => {
         selectedMonth={selectedMonth}
         onDateClick={onDateClick}
       />
-      {selectedDate && (
-        <BudgetModal
-          open={isOpen}
-          onClose={onCloseBudgetModal}
-          selectedDate={selectedDate}
-        />
-      )}
+      <BudgetModal
+        open={isOpen}
+        onClose={onCloseBudgetModal}
+        selectedDate={selectedDate}
+      />
     </>
   );
 };

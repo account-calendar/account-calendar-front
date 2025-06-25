@@ -3,13 +3,14 @@
 import Button from "@/shared/components/button";
 import InputField from "@/entities/components/input-field";
 import { useRouter } from "next/navigation";
+import { APP_ROUTES } from "@/services/constants/app-routes";
 
 export default function Home() {
   const router = useRouter();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    router.push("/main");
+    router.push(APP_ROUTES.MAIN);
   };
 
   return (
