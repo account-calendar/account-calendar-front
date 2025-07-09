@@ -4,13 +4,14 @@ import Icon from "@/shared/components/Icon";
 import type { IconProps } from "@/shared/components/Icon";
 import { cn } from "@/shared/utils/style";
 import clsx from "clsx";
-import { forwardRef, type InputHTMLAttributes, useState } from "react";
+import { forwardRef, type InputHTMLAttributes } from "react";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   containerClassName?: string;
   status?: "default" | "error";
   iconOption?: IconProps;
   ref?: React.Ref<HTMLInputElement>;
+  unit?: string;
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -23,16 +24,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       disabled,
       type = "text",
       onChange,
+      unit,
       ...props
     },
     ref
   ) => {
-    const [passwordVisible, setPasswordVisible] = useState(false);
-
-    const handleClickPasswordVisibility = () => {
-      setPasswordVisible((prev) => !prev);
-    };
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange?.(e);
     };
@@ -40,7 +36,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div
         className={cn(
-          "w-full h-[44px] rounded-lg bg-bg-base-normal flex items-center px-lg caret-purple-200 ring-inset ring-bg-base-normal transition-all",
+          "w-full h-[44px] rounded-lg bg-bg-base-normal flex items-center px-lg gap-x-sm caret-purple-200 ring-inset ring-bg-base-normal transition-all",
           "focus-within:ring-inset focus-within:ring-1 focus-within:ring-border-primary-hover",
           { "bg-bg-disabled": disabled },
           {
@@ -50,6 +46,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           containerClassName
         )}
       >
+        {unit && <span className="text-text-weak">{unit}</span>}
         <input
           className={cn(
             "peer outline-none text-text-strong typo-sub-lg-normal flex-1",
@@ -58,7 +55,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             className
           )}
           placeholder="Value"
-          type={type === "password" && !passwordVisible ? "password" : type}
+          type={type}
           onChange={handleChange}
           ref={ref}
           disabled={disabled}

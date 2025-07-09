@@ -5,7 +5,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 type FullModalProps = {
   open: boolean;
   onClose: () => void;
-  title: string;
+  title?: string;
   children: React.ReactNode;
 };
 
@@ -26,7 +26,9 @@ const FullModal = ({ open, onClose, children, title }: FullModalProps) => {
       >
         <div className="flex items-center justify-between text-text-strong h-[56px] pl-xl pr-sm">
           <span className="typo-h-lg-strong flex-1">logo</span>
-          <span className="typo-h-lg-strong flex-1 text-center">{title}</span>
+          {title && (
+            <span className="typo-h-sm-strong flex-1 text-center">{title}</span>
+          )}
           <div className="flex-1 flex items-center justify-end">
             <Button
               className="p-xs h-[40px] w-[40px]"

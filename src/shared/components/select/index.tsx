@@ -4,6 +4,7 @@ import { cn } from "@/shared/utils/style";
 export type SelectProps = {
   className?: string;
   value?: string;
+  iconString?: string;
   placeholder?: string;
   disabled?: boolean;
   onClick?: () => void;
@@ -12,6 +13,7 @@ export type SelectProps = {
 const Select = ({
   className,
   value,
+  iconString,
   placeholder,
   disabled,
   onClick,
@@ -29,7 +31,10 @@ const Select = ({
       disabled={disabled}
       onClick={onClick}
     >
-      <div className="flex-1">{value || placeholder}</div>
+      <div className="flex-1 flex items-center gap-x-sm">
+        {iconString && <span>{iconString}</span>}
+        {value || placeholder}
+      </div>
       <Icon
         icon="CHEVRON_RIGHT"
         className="size-2xl text-text-weak group-disabled:text-text-disabled"

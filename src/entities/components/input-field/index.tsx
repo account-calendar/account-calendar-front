@@ -9,10 +9,11 @@ type InputFieldProps = FieldProps & {
 
 const InputField = ({ inputOptions, ...fieldProps }: InputFieldProps) => {
   const inputStatus = fieldProps?.errorMessage ? "error" : inputOptions?.status;
+  const required = fieldProps?.required;
 
   return (
     <Field {...fieldProps}>
-      <Input status={inputStatus} {...inputOptions} />
+      <Input status={inputStatus} required={required} {...inputOptions} />
     </Field>
   );
 };
