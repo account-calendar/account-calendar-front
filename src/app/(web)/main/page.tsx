@@ -20,31 +20,27 @@ const MainPage = () => {
         <div className="mb-xs bg-bg-base-weak rounded-lg px-md py-lg flex flex-col">
           <div className="mb-sm flex flex-col">
             <span className="typo-lb-sm-normal text-text-normal">합계</span>
-            <span className="typo-h-md-strong text-text-strong">1,000,000</span>
+            <span className="typo-h-md-strong text-text-strong">1,000</span>
           </div>
           <div className="mb-sm flex gap-md">
             <div className="flex-1 flex flex-col">
               <span className="typo-lb-sm-normal text-text-normal">
                 총 지출
               </span>
-              <span className="typo-h-md-strong text-text-expense">
-                1,000,000
-              </span>
+              <span className="typo-h-md-strong text-text-expense">400</span>
             </div>
             <div className="flex-1 flex flex-col">
               <span className="typo-lb-sm-normal text-text-normal">
                 총 수입
               </span>
-              <span className="typo-h-md-strong text-text-income">
-                1,000,000
-              </span>
+              <span className="typo-h-md-strong text-text-income">1,400</span>
             </div>
           </div>
           <div className="flex flex-col">
             <span className="typo-lb-sm-normal text-text-normal mb-sm">
               지출제한
             </span>
-            <ProgressBar />
+            <ProgressBar max={1000} current={400} />
           </div>
         </div>
         <Button

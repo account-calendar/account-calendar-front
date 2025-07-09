@@ -1,6 +1,6 @@
 import Button from "@/shared/components/button";
 
-const Navigation = () => {
+const MainNavigation = () => {
   return (
     <div className="p-sm flex items-center justify-between text-white">
       <div>logo</div>
@@ -28,4 +28,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default MainNavigation;

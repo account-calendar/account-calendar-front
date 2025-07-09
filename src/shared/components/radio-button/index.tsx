@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/shared/utils/style";
 import type { ButtonHTMLAttributes } from "react";
 
@@ -15,7 +17,7 @@ const RadioButton = ({
   return (
     <button
       className={cn(
-        "h-[44px] px-lg rounded-lg text-text-strong typo-btn-lg-strong transition-all",
+        "h-[44px] px-lg rounded-lg text-text-strong typo-btn-lg-strong transition-all cursor-pointer",
         selected
           ? "bg-bg-primary hover:bg-bg-primary-hover"
           : "bg-bg-tertiary hover:bg-bg-tertiary-hover",

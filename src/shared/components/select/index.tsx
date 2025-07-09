@@ -29,7 +29,7 @@ const Select = ({
       disabled={disabled}
       onClick={onClick}
     >
-      <span className="flex-1">{value || placeholder}</span>
+      <div className="flex-1">{value || placeholder}</div>
       <Icon
         icon="CHEVRON_RIGHT"
         className="size-2xl text-text-weak group-disabled:text-text-disabled"
