@@ -1,6 +1,6 @@
 import Modal from "@/shared/components/modal";
 import EmptyBudget from "@/widgets/components/budget-modal/_components/empty-budget";
-import useTransactionsModalManager from "@/widgets/components/transactions/_hooks/use-transactions-modal-manager";
+import useTransactionsModalManager from "@/widgets/hooks/use-transactions-modal-manager";
 import dayjs from "dayjs";
 
 type BudgetModalProps = {
