@@ -1,4 +1,6 @@
-import Button from "@/shared/components/button";
+"use client";
+
+import Button, { type ButtonProps } from "@/shared/components/button";
 import { cn } from "@/shared/utils/style";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Fragment } from "react";
@@ -8,18 +10,19 @@ type DropdownProps = {
     label: string;
     onClick: () => void;
   }[];
+  buttonOption?: ButtonProps;
 };
 
-const Dropdown = ({ items }: DropdownProps) => {
+const Dropdown = ({ items, buttonOption }: DropdownProps) => {
   return (
     <Menu>
-      <MenuButton></MenuButton>
       <MenuButton as={Fragment}>
         <Button
           variant="icon"
           iconOption={{ icon: "MORE", className: "text-text-strong" }}
           size="sm"
           className="text-text-strong"
+          {...buttonOption}
         />
       </MenuButton>
       <MenuItems

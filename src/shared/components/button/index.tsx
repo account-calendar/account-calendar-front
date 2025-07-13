@@ -7,7 +7,7 @@ import type { ButtonHTMLAttributes } from "react";
 type ButtonVariant = "primary" | "secondary" | "tertiary" | "text" | "icon";
 type ButtonSize = "xl" | "lg" | "md" | "sm" | "xs";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
   iconOption?: IconProps;

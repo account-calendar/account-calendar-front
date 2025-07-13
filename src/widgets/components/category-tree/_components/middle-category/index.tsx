@@ -1,4 +1,6 @@
-import Button from "@/shared/components/button";
+"use client";
+
+import Dropdown from "@/shared/components/dropdown";
 import { cn } from "@/shared/utils/style";
 
 type MiddleCategoryProps = {
@@ -17,12 +19,18 @@ const MiddleCategory = ({ title, icon }: MiddleCategoryProps) => {
         {icon && <span>{icon}</span>}
         <span>{title}</span>
       </div>
-      <Button
-        variant="icon"
-        size="md"
-        iconOption={{
-          icon: "MORE",
-          className: "size-2xl",
+      <Dropdown
+        items={[
+          { label: "수정", onClick: () => {} },
+          { label: "삭제", onClick: () => {} },
+        ]}
+        buttonOption={{
+          size: "md",
+          className: "px-sm",
+          iconOption: {
+            icon: "MORE",
+            className: "size-2xl",
+          },
         }}
       />
     </div>

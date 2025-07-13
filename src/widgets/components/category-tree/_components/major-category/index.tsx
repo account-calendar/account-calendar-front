@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/shared/components/button";
+import Dropdown from "@/shared/components/dropdown";
 import Icon from "@/shared/components/Icon";
 import { cn } from "@/shared/utils/style";
 import { useState, type ReactNode } from "react";
@@ -63,12 +63,19 @@ const MajorCategory = ({
             </div>
           </div>
         </button>
-        <Button
-          variant="icon"
-          size="md"
-          iconOption={{
-            icon: "MORE",
-            className: "size-2xl",
+        <Dropdown
+          items={[
+            { label: "중분류 추가", onClick: () => {} },
+            { label: "수정", onClick: () => {} },
+            { label: "삭제", onClick: () => {} },
+          ]}
+          buttonOption={{
+            size: "md",
+            className: "px-sm",
+            iconOption: {
+              icon: "MORE",
+              className: "size-2xl",
+            },
           }}
         />
       </div>
