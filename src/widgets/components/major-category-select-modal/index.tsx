@@ -2,6 +2,7 @@ import Button from "@/shared/components/button";
 import CategoryCard from "@/shared/components/category-card";
 import FullModal from "@/shared/components/full-modal";
 import Input from "@/shared/components/input";
+import useMajorCategoryCreateModalManager from "@/widgets/hooks/use-major-category-create-modal-manager";
 
 type MajorCategorySelectModalProps = {
   open: boolean;
@@ -14,6 +15,9 @@ const MajorCategorySelectModal = ({
   onClose,
   onConfirm,
 }: MajorCategorySelectModalProps) => {
+  const { onOpenMajorCategoryCreateModal } =
+    useMajorCategoryCreateModalManager();
+
   const handleClickConfirm = () => {
     onConfirm();
     onClose();
@@ -40,7 +44,13 @@ const MajorCategorySelectModal = ({
         </div>
       </div>
       <div className="p-xl bg-gray-600">
-        <Button variant="primary" size="xl" className="w-full" type="submit">
+        <Button
+          variant="primary"
+          size="xl"
+          className="w-full"
+          type="submit"
+          onClick={onOpenMajorCategoryCreateModal}
+        >
           새로 만들기
         </Button>
       </div>

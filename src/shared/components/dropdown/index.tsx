@@ -40,7 +40,7 @@ const Dropdown = ({ items, buttonOption }: DropdownProps) => {
             <Button
               variant="tertiary"
               size="md"
-              className="min-h-[40px]"
+              className="min-h-[40px] w-full text-left"
               onClick={item.onClick}
             >
               {item.label}

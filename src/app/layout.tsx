@@ -30,7 +30,11 @@ export default function RootLayout({
           "h-[100dvh] antialiased bg-gray-600"
         )}
       >
-        <RootProvider>{children}</RootProvider>
+        <RootProvider>
+          <div className="mx-auto max-w-[430px] w-full h-full flex flex-col">
+            {children}
+          </div>
+        </RootProvider>
       </body>
     </html>
   );

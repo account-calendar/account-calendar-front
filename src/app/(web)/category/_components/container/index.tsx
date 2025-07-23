@@ -1,4 +1,7 @@
+"use client";
+
 import Button from "@/shared/components/button";
+import useMajorCategoryCreateModalManager from "@/widgets/hooks/use-major-category-create-modal-manager";
 
 type CategoryContainerProps = {
   title: string;
@@ -6,6 +9,9 @@ type CategoryContainerProps = {
 };
 
 const CategoryContainer = ({ title, children }: CategoryContainerProps) => {
+  const { onOpenMajorCategoryCreateModal } =
+    useMajorCategoryCreateModalManager();
+
   return (
     <div className="flex flex-col gap-y-lg">
       <div className="flex items-center gap-x-lg">
@@ -15,6 +21,7 @@ const CategoryContainer = ({ title, children }: CategoryContainerProps) => {
           size="xs"
           className="h-[40px]"
           iconOption={{ icon: "PLUS" }}
+          onClick={onOpenMajorCategoryCreateModal}
         >
           대분류 추가하기
         </Button>

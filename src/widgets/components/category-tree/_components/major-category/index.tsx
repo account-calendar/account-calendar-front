@@ -3,6 +3,7 @@
 import Dropdown from "@/shared/components/dropdown";
 import Icon from "@/shared/components/Icon";
 import { cn } from "@/shared/utils/style";
+import useMiddleCategoryCreateModalManager from "@/widgets/hooks/use-middle-category-create-modal-manager";
 import { useState, type ReactNode } from "react";
 
 type MajorCategoryProps = {
@@ -19,6 +20,9 @@ const MajorCategory = ({
   children,
 }: MajorCategoryProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { onOpenMiddleCategoryCreateModal } =
+    useMiddleCategoryCreateModalManager();
+
   return (
     <div
       className={cn(
@@ -65,7 +69,7 @@ const MajorCategory = ({
         </button>
         <Dropdown
           items={[
-            { label: "중분류 추가", onClick: () => {} },
+            { label: "중분류 추가", onClick: onOpenMiddleCategoryCreateModal },
             { label: "수정", onClick: () => {} },
             { label: "삭제", onClick: () => {} },
           ]}

@@ -4,7 +4,7 @@ import useDisclosure from "@/shared/hooks/use-disclosure";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Shared/Modal",
+  title: "Shared/Modal/Default",
   parameters: {
     layout: "centered",
   },
