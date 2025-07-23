@@ -42,10 +42,10 @@ const DayButton = ({
         {day.getDate()}
       </span>
       {!!income && (
-        <span className="text-text-income text-[8px] leading-[10px]">{`+${income.toLocaleString()}`}</span>
+        <span className="text-text-income typo-lb-sm-normal overflow-hidden">{`+${income.toLocaleString()}`}</span>
       )}
       {!!expense && (
-        <span className="text-text-expense text-[8px] leading-[10px]">{`-${expense.toLocaleString()}`}</span>
+        <span className="text-text-expense typo-lb-sm-normal overflow-hidden">{`-${expense.toLocaleString()}`}</span>
       )}
     </button>
   );
