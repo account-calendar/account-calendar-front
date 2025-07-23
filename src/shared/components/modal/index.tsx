@@ -5,7 +5,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 type ModalProps = {
   open: boolean;
   onClose: () => void;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   title: string;
   description?: string;
   confirmText?: string;
@@ -35,7 +35,7 @@ const Modal = ({
       <DialogPanel
         transition
         className={cn(
-          "rounded-3xl bg-bg-base-normal duration-300 ease-out w-full max-h-[506px] max-w-[344px] pt-4xl px-2xl pb-3xl flex flex-col gap-xl overflow-y-auto",
+          "rounded-3xl bg-bg-base-normal duration-300 ease-out w-full max-h-[506px] max-w-[390px] pt-4xl px-2xl pb-3xl flex flex-col gap-xl overflow-y-auto",
           "data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
         )}
       >
@@ -55,7 +55,7 @@ const Modal = ({
             </span>
           )}
         </div>
-        <div className="flex-1 overflow-y-auto">{children}</div>
+        {children && <div className="flex-1 overflow-y-auto">{children}</div>}
         <div className="flex gap-sm gap-x-md">
           {onCancel && (
             <Button

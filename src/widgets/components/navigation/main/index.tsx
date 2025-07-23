@@ -21,12 +21,14 @@ const MainNavigation = () => {
           iconOption={{ icon: "CHART", className: "size-2xl" }}
           className="text-white px-sm"
         />
-        <Button
-          variant="icon"
-          size="md"
-          iconOption={{ icon: "USER", className: "size-2xl" }}
-          className="text-white px-sm"
-        />
+        <Link href={APP_ROUTES.MY}>
+          <Button
+            variant="icon"
+            size="md"
+            iconOption={{ icon: "USER", className: "size-2xl" }}
+            className="text-white px-sm"
+          />
+        </Link>
       </div>
     </div>
   );
