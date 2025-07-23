@@ -8,6 +8,10 @@ type BudgetLimitModalProps = {
 };
 
 const BudgetLimitModal = ({ open, onClose }: BudgetLimitModalProps) => {
+  const handleConfirm = () => {
+    onClose();
+  };
+
   return (
     <FullModal open={open} onClose={onClose}>
       <div className="px-xl py-lg flex flex-col gap-y-4xl">
@@ -22,7 +26,12 @@ const BudgetLimitModal = ({ open, onClose }: BudgetLimitModalProps) => {
           </div>
           <Input placeholder="한달에 얼마 쓸 건지 알려주세요." />
         </div>
-        <Button variant="primary" size="xl" className="w-full">
+        <Button
+          variant="primary"
+          size="xl"
+          className="w-full"
+          onClick={handleConfirm}
+        >
           등록하기
         </Button>
       </div>

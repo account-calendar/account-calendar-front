@@ -4,10 +4,12 @@ import MainCalendar from "@/app/(web)/main/_components/main-calendar";
 import Button from "@/shared/components/button";
 import MonthPicker from "@/shared/components/month-picker";
 import ProgressBar from "@/shared/components/progress-bar";
+import useBudgetLimitModal from "@/widgets/hooks/use-budget-limit-modal";
 import { useState } from "react";
 
 const MainPage = () => {
   const [selectedMonth, setSelectedMonth] = useState(new Date().toISOString());
+  const { onOpenBudgetLimitModal } = useBudgetLimitModal();
   return (
     <div className="flex flex-col text-white flex-1 px-xl pb-2xl">
       <div className="mb-md">
@@ -48,6 +50,7 @@ const MainPage = () => {
           size="xs"
           className="h-fit self-end"
           iconOption={{ icon: "EDIT" }}
+          onClick={onOpenBudgetLimitModal}
         >
           지출 제한 수정하기
         </Button>
