@@ -26,3 +26,11 @@ export const Default: Story = {
     className: "w-[180px]",
   },
 };
+
+export const LongText: Story = {
+  args: {
+    icon: "💰",
+    title: "CategoryCardCategoryCardCategoryCardCategoryCardCategoryCard",
+    className: "w-[180px]",
+  },
+};

@@ -15,7 +15,7 @@ const CategoryCard = ({
   return (
     <button
       className={cn(
-        "group w-full aspect-square bg-bg-tertiary rounded-3xl px-xl pt-5xl flex flex-col items-center gap-y-sm cursor-pointer transition-all",
+        "group w-full bg-bg-tertiary rounded-3xl px-xl pt-5xl pb-3xl flex flex-col items-center gap-y-sm cursor-pointer transition-all",
         "hover:bg-bg-tertiary-hover",
         "active:bg-bg-tertiary-pressed",
         className
@@ -31,7 +31,9 @@ const CategoryCard = ({
       >
         {icon}
       </div>
-      <div className="text-white typo-h-xs-strong">{title}</div>
+      <span className="text-white typo-h-xs-strong w-full overflow-hidden text-ellipsis">
+        {title}
+      </span>
     </button>
   );
 };
