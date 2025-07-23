@@ -39,8 +39,8 @@ const Calendar = ({ className, selectedMonth, onDateClick }: CalendarProps) => {
           disabled={
             new Date(day).getMonth() !== new Date(selectedMonth).getMonth()
           }
-          income={1000000}
-          expense={1000000}
+          income={10000}
+          expense={10000}
         />
       ))}
     </div>
