@@ -1,5 +1,8 @@
 const API_ROUTES = {
-  USER: "/users",
+  AUTH: {
+    LOGIN: "/auth/login",
+    USER: "/auth/user",
+  },
 };
 
 export default API_ROUTES;

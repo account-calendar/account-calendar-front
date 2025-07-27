@@ -84,7 +84,6 @@ const MonthPicker = ({ selectedMonth, onMonthChange }: MonthPickerProps) => {
                   ))}
                 </VerticalSwiper>
                 <VerticalSwiper
-                  loop
                   ref={monthSwiperRef}
                   initialSlide={DEFAULT_MONTH.indexOf(selectMonth) - 1}
                 >

@@ -1,5 +1,5 @@
 import MainNavigation from "@/widgets/components/navigation/main";
-import type { PropsWithChildren } from "react";
+import { type PropsWithChildren } from "react";
 
 const WebLayout = ({ children }: PropsWithChildren) => {
   return (

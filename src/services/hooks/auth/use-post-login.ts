@@ -1,17 +1,17 @@
 import { QueryKey } from "@/services/constants/query-keys";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import patchMyName from "@/services/fetchers/user/patch-my-name";
+import postLogin from "@/services/fetchers/auth/post-login";
 import type {
-  PatchMyNamePayload,
-  PatchMyNameResponse,
-} from "@/services/fetchers/user/patch-my-name";
+  PostLoginPayload,
+  PostLoginResponse,
+} from "@/services/fetchers/auth/post-login";
 import { AxiosError } from "axios";
 
-const usePatchMyName = () => {
+const usePostLogin = () => {
   const queryClient = useQueryClient();
 
-  return useMutation<PatchMyNameResponse, AxiosError, PatchMyNamePayload>({
-    mutationFn: (payload) => patchMyName(payload),
+  return useMutation<PostLoginResponse, AxiosError, PostLoginPayload>({
+    mutationFn: postLogin,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: [QueryKey.User],
@@ -22,4 +22,4 @@ const usePatchMyName = () => {
   });
 };
 
-export default usePatchMyName;
+export default usePostLogin;
