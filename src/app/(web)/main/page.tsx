@@ -1,6 +1,7 @@
 "use client";
 
 import MainCalendar from "@/app/(web)/main/_components/main-calendar";
+import useGetUser from "@/services/hooks/auth/use-get-user";
 import Button from "@/shared/components/button";
 import MonthPicker from "@/shared/components/month-picker";
 import ProgressBar from "@/shared/components/progress-bar";
@@ -10,6 +11,9 @@ import { useState } from "react";
 const MainPage = () => {
   const [selectedMonth, setSelectedMonth] = useState(new Date().toISOString());
   const { onOpenBudgetLimitModal } = useBudgetLimitModal();
+
+  const { data: userData } = useGetUser();
+
   return (
     <div className="flex flex-col text-white flex-1 px-xl pb-2xl">
       <div className="mb-md">
@@ -42,7 +46,7 @@ const MainPage = () => {
             <span className="typo-lb-sm-normal text-text-normal mb-sm">
               지출제한
             </span>
-            <ProgressBar max={1000} current={400} />
+            <ProgressBar max={userData?.targetExpense} current={400} />
           </div>
         </div>
         <Button

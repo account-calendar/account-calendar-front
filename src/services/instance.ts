@@ -5,6 +5,7 @@ const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 const baseInstance = axios.create({
   baseURL,
+  withCredentials: true,
 });
 
 baseInstance.interceptors.response.use(({ data }) => data);
