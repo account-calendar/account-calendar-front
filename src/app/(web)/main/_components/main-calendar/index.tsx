@@ -1,7 +1,6 @@
 import Calendar from "@/shared/components/calender";
-import BudgetModal from "@/widgets/components/budget-modal";
 import type { TransactionsDTO } from "@/services/types/transactions";
-import { overlay } from "overlay-kit";
+import useBudgetModalManager from "@/widgets/hooks/use-budget-modal";
 
 type MainCalendarProps = {
   selectedMonth: string;
@@ -9,20 +8,14 @@ type MainCalendarProps = {
 };
 
 const MainCalendar = ({ selectedMonth, transactions }: MainCalendarProps) => {
-  const handleDateClick = (date: Date) => {
-    overlay.open(({ isOpen, close }) => {
-      return <BudgetModal open={isOpen} onClose={close} selectedDate={date} />;
-    });
-  };
-
-  console.log({ transactions });
+  const { onOpenBudgetModal } = useBudgetModalManager();
 
   return (
     <Calendar
       className="flex-1"
       selectedMonth={selectedMonth}
       transactions={transactions}
-      onDateClick={handleDateClick}
+      onDateClick={onOpenBudgetModal}
     />
   );
 };
