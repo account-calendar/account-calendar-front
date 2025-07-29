@@ -4,6 +4,9 @@ const API_ROUTES = {
     USER: "/auth/user",
     CHANGE_TARGET_EXPENSE: "/auth/target-expense",
   },
+  TRANSACTIONS: {
+    GET: "/transactions",
+  },
 };
 
 export default API_ROUTES;

@@ -18,7 +18,7 @@ const putChangeTargetExpense = async ({
     PutChangeTargetExpenseRequest
   >(API_ROUTES.AUTH.CHANGE_TARGET_EXPENSE, request);
 
-  return response;
+  return response.data;
 };
 
 export default putChangeTargetExpense;

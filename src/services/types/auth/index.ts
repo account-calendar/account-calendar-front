@@ -1,6 +1,6 @@
 export type UserDTO = {
   userId: number;
   email: string;
-  targetExpense: number | null;
+  targetExpense: number;
   createdDate: string;
 };

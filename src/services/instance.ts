@@ -21,12 +21,34 @@ baseInstance.interceptors.request.use((config) => {
   return config;
 });
 
+type ApiDefaultResponse<T> = {
+  data: T;
+};
+
 type ApiRequestMethods = {
-  get<T>(url: string, request?: AxiosRequestConfig): Promise<T>;
-  post<T, K>(url: string, data?: K, config?: AxiosRequestConfig): Promise<T>;
-  put<T, K>(url: string, data?: K, config?: AxiosRequestConfig): Promise<T>;
-  patch<T, K>(url: string, data?: K, config?: AxiosRequestConfig): Promise<T>;
-  delete<T>(url: string, request?: AxiosRequestConfig): Promise<T>;
+  get<T>(
+    url: string,
+    request?: AxiosRequestConfig
+  ): Promise<ApiDefaultResponse<T>>;
+  post<T, K>(
+    url: string,
+    data?: K,
+    config?: AxiosRequestConfig
+  ): Promise<ApiDefaultResponse<T>>;
+  put<T, K>(
+    url: string,
+    data?: K,
+    config?: AxiosRequestConfig
+  ): Promise<ApiDefaultResponse<T>>;
+  patch<T, K>(
+    url: string,
+    data?: K,
+    config?: AxiosRequestConfig
+  ): Promise<ApiDefaultResponse<T>>;
+  delete<T>(
+    url: string,
+    request?: AxiosRequestConfig
+  ): Promise<ApiDefaultResponse<T>>;
 };
 
 export const apiRequest: ApiRequestMethods = {

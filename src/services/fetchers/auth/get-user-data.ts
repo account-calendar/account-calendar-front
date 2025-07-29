@@ -9,7 +9,7 @@ const getUser = async () => {
     API_ROUTES.AUTH.USER
   );
 
-  return response;
+  return response.data;
 };
 
 export default getUser;

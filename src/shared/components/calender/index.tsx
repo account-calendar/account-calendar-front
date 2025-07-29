@@ -3,15 +3,22 @@
 import DayButton from "@/shared/components/calender/_components/day-button";
 import { getMonthDays } from "@/shared/utils/day";
 import { cn } from "@/shared/utils/style";
+import type { TransactionsDTO } from "@/services/types/transactions";
 import { useMemo } from "react";
 
 type CalendarProps = {
   className?: string;
   selectedMonth: string;
+  transactions?: TransactionsDTO;
   onDateClick: (date: Date) => void;
 };
 
-const Calendar = ({ className, selectedMonth, onDateClick }: CalendarProps) => {
+const Calendar = ({
+  className,
+  selectedMonth,
+  transactions,
+  onDateClick,
+}: CalendarProps) => {
   const days = useMemo(() => {
     return getMonthDays(selectedMonth);
   }, [selectedMonth]);
@@ -39,8 +46,8 @@ const Calendar = ({ className, selectedMonth, onDateClick }: CalendarProps) => {
           disabled={
             new Date(day).getMonth() !== new Date(selectedMonth).getMonth()
           }
-          income={10000}
-          expense={10000}
+          income={transactions?.dates[day]?.income ?? 0}
+          expense={transactions?.dates[day]?.expense ?? 0}
         />
       ))}
     </div>

@@ -16,7 +16,7 @@ const postLogin = async ({ request }: PostLoginPayload) => {
     request
   );
 
-  return response;
+  return response.data;
 };
 
 export default postLogin;
